@@ -11,7 +11,7 @@
     }
 
 
-html{
+html {
     font-family: 'Raleway', sans-serif;
     }
 
@@ -66,47 +66,48 @@ html{
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    color: #656980;
-}
+    color: $grey-log;
+    }
 
 
 .header-logo__weight {
     color: $white;
     font-weight: 100;
-}
+    }
 
 .links {
-        text-decoration:none; 
-        color: white;
-        width: 134px;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 15px;
-        text-align: center;
-        color: $white;
-        text-transform: uppercase;
-        padding-top: 36px;
-        &:after {
+    text-decoration:none; 
+    color:$white;
+    width: 134px;
+    font-size: $_13px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+     text-align: center;
+    color: $white;
+    padding-top: 36px;
+
+    &:after {
           display: block; 
           content: ""; 
           height: 3px; 
           width: 0%;
           margin-top: 32px;
           background-color: $grey-middle; 
-          transition: width 0.4s ease-in-out; 
+          transition: 0.4s; 
           }
       
-        &:hover:after,
-        &:active:after {
+    &:hover:after,
+    &:active:after {
           width: 100%;
           }
-        &:hover{
-        color: $white;
+    &:hover{
+          color: $white;
             &:after{
-              background-color:#BABBC5;
+              background-color:$grey-middle;
             }
           }
-        &:active{
+    &:active{
           color: $red-active;
             &:after{
               background-color:$red-active;
@@ -115,23 +116,50 @@ html{
         }
       
 
-    .main-text{
-      Font-size: 24px;
-      Line-height: 28px;
-      color:$white;
-      margin:23px 0 64px 0;
+.main-title{
+     @include h1;
+    }
+
+
+.main-text{
+    color:$white;
+    text-align: center;
+    font-family: Raleway;
+    font-size: $_24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin:32px;
       }
       
-    .btn-header{
-      height: 80px;
-      width: 370px;
-      background-color: $red-hover;
-      font-size: 24px;
-      font-weight: 900;
-      line-height: 28px;
-      color: $white;
-      border: none;
-      align-self: center;
-      margin-bottom: 120px;
-      
+.btn-header{
+    height: 80px;
+    width: 370px;
+    background-color: $red-active;
+    color: $white;
+    border: none;
+    align-self: center;
+    margin: 80px 0 120px;
+    text-align: center;
+    font-family: Raleway;
+    font-size: $_24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: $red-hover;
+        }
+    &:active{
+        background-color: $red-active;
+        box-shadow: 0px 0px 20px 10px rgb(221, 66, 66);
+        }
       }
+
+
+
+
+
+
+    
