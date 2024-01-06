@@ -17,6 +17,7 @@ html {
 
 
 .container {
+    max-width: 1170px;
     padding: 0 $_15px;
     margin: auto;
     }
@@ -86,42 +87,40 @@ html {
      text-align: center;
     color: $white;
     padding-top: 36px;
-
     &:after {
-          display: block; 
-          content: ""; 
-          height: 3px; 
-          width: 0%;
-          margin-top: 32px;
-          background-color: $grey-middle; 
-          transition: 0.4s; 
-          }
-      
+        display: block; 
+        content: ""; 
+        height: 3px; 
+        width: 0%;
+        margin-top: 32px;
+        background-color: $grey-middle; 
+        transition: 0.4s; 
+        }  
     &:hover:after,
     &:active:after {
-          width: 100%;
-          }
+        width: 100%;
+        }
     &:hover{
-          color: $white;
-            &:after{
-              background-color:$grey-middle;
-            }
-          }
+        color: $white;
+    &:after{
+        background-color:$grey-middle;
+        }
+        }
     &:active{
-          color: $red-active;
-            &:after{
-              background-color:$red-active;
-            }
-          }
+        color: $red-active;
+    &:after{
+    background-color:$red-active;
+        }
+        }
         }
       
 
-.main-title{
+.main-title {
      @include h1;
     }
 
 
-.main-text{
+.main-text {
     color:$white;
     text-align: center;
     font-family: Raleway;
@@ -129,17 +128,18 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin:32px;
-      }
+    margin-top:30px;
+    align-self: center;
+    }
       
-.btn-header{
+.btn-header {
     height: 80px;
     width: 370px;
     background-color: $red-active;
     color: $white;
     border: none;
     align-self: center;
-    margin: 80px 0 120px;
+    margin: 80px 0 125px;
     text-align: center;
     font-family: Raleway;
     font-size: $_24px;
@@ -147,7 +147,6 @@ html {
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
-
     &:hover{
         background-color: $red-hover;
         }
@@ -158,8 +157,233 @@ html {
       }
 
 
+.cards {
+    text-align: center;
+    margin-top: 116px;
+    margin-bottom: 26px;
+    &-column{
+        margin-bottom: 88px;
+        }
+    &-name{
+        text-align: center;
+        font-family: Raleway;
+        font-size: $_24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+        color: $black;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        }
+    &-description{
+        color:$grey-log;
+        text-align: center;
+        font-family: Raleway;
+        font-size: $_18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        }
+        }
+        
+
+        @media(max-width:576px){
+          .cards{
+            flex-wrap: wrap;
+            margin:40px 0 35px 0;
+            &-name{
+              margin:37px 0 9px 0;
+            }
+            &-column{
+              margin-bottom: 41px;
+            }
+            &-description{
+              margin:0;
+            }
+          }
+        }
+
+
+.container-grid {
+    max-width: 100%;
+    }
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    }
+
+
+.grid__img {
+    width: 378px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    }
+
+
+.grid-item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    font-size: 24px;
+}
+
+
+.grid-mask {
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    color:white;
+    font-size: 24px;
+    font-weight: 900;
+    background-color: $red-active;
+    padding-top: 126px;
+    text-align: center;
+    opacity: 0;
+    transform:rotateY(90deg);
+    -webkit-transition:all .5s;
+    -o-transition:all .5s;
+    transition: all .5s;
+    }
+  
+
+.grid-title {
+    @include h4;
+    }
+  
+
+.grid-text {
+    @include h5;
+    }
+
+.grid-item:hover .grid-mask{
+    opacity: 0.6;
+    transform:rotateY(0deg);
+    &:active{
+        opacity: 0.8;
+        background-color: $red-hover;
+        }
+    }
+
+
+.employee{
+    margin: 114px 0 ;
+    &-name{
+    color: $dark-grey;
+    font-family: Raleway;
+    font-size: $_24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 30px 0 5px 0;
+        }
+    &-title{
+        color: $red;
+        font-family: Raleway;
+        font-size: $_18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin:0;
+        }
+    &-review{
+        color: #6C7279;
+        font-family: Raleway;
+        font-size: $_18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 18px 0 40px 0;
+        }
+        }
+
+
+.employee-photo {
+    width: 255px;
+    height: 255px;
+    overflow: hidden;
+}
+
+
+.employee-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+
+
+.col-sm-3 {
+    padding: 0 15px;
+    }
+       
 
 
 
+.bg-prefooter {
+    background-color: $blue-pf;
+    text-align: center;
+    padding: 71px 0 67px 0;
+    align-self: center;
+    display: flex;
+    justify-content:space-between;
+    }
+
+
+.prefooter-name{
+    color: $white;
+    text-align: center;
+    font-family: Raleway;
+    font-size: $_18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    &-description{
+        @include h5;
+      }
+    }
+
+
+    .icons-card-footer {
+        margin-top: 50px;
+
+    }
 
     
+.social-icon {
+    margin: 0 27px;
+}
+
+
+.bg-footer{
+    background-color:$blue-ft;
+    text-align: center;
+    padding: 24px 0 24px 0;
+    }
+    .footer-name {
+        color: $grey;
+        font-family: Raleway;
+        font-size: $_18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+    span{
+    color:$white;
+    }

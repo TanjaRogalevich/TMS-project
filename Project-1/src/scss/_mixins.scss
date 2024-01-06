@@ -8,10 +8,11 @@
     line-height: normal;
     text-transform: uppercase;
     margin-top: 130px;
+    align-self: center;
 }
 
 @mixin h2 {
-    color: #000;
+    color: #FFF;
     font-family: Raleway;
     font-size: $_36px;
     font-style: normal;
@@ -20,7 +21,7 @@
 }
 
 @mixin h3 {
-    color: #000;
+    color: #FFF;
     font-family: Raleway;
     font-size: $_30px;
     font-style: normal;
@@ -29,7 +30,7 @@
 }
 
 @mixin h4 {
-    color: #000;
+    color: #FFF;
     font-family: Raleway;
     font-size: $_24px;
     font-style: normal;
@@ -39,7 +40,7 @@
 }
 
 @mixin h5 {
-    color: #000;
+    color: #FFF;
     font-family: Raleway;
     font-size: $_18px;
     font-style: normal;
@@ -48,7 +49,7 @@
 }
 
 @mixin h6 {
-    color: #000;
+    color: #FFF;
     font-family: Raleway;
     font-size: $_13px;
     font-style: normal;
