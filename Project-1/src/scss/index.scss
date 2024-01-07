@@ -156,6 +156,24 @@ html {
         }
       }
 
+      @media(max-width:320px){
+        .main-screen{
+          text-align: center;
+          padding-top: 0;
+          align-self: center;
+        }
+        .main-text{
+      margin-bottom: 49px;
+        }
+        .backround-header{
+          border-bottom: 1px solid;
+          border-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+          }
+          .links{
+            text-align: left;
+          }
+      }
+
 
 .cards {
     text-align: center;
@@ -188,7 +206,7 @@ html {
         }
         
 
-        @media(max-width:576px){
+        @media(max-width:320px){
           .cards{
             flex-wrap: wrap;
             margin:40px 0 35px 0;
@@ -275,6 +293,26 @@ html {
         }
     }
 
+    @media(max-width:320px) {
+        .grid {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            height: 100%;
+          }
+          .child {
+            width: 160px;
+            height: 144px;
+            width: 50%;
+          }
+          .grid__img {
+            width: 160px;
+            height: 144px;
+          }
+    }
+       
+      
+
 
 .employee{
     margin: 114px 0 ;
@@ -325,11 +363,202 @@ html {
     }
 
 
+    @media(max-width:320px){
+        .employee{
+          margin: 34px 0 41px 0;
+          &-photo{
+            width: 100%;
+            
+           }
+           &-name{
+            margin-top:25px;
+           }
+           &-review{
+            margin:38px 0 55px 0;
+           }
+           &-column{
+            margin-bottom: 56px;
+           }
+           &-column:last-child{
+          margin-bottom: 0;
+           }
+        }
+      }
+
+
+      @media(max-width: 1024px){
+        .employee{
+          margin: 34px 0 41px 0;
+          &-photo{
+            width: 100%;
+            
+           }
+           &-name{
+            margin-top:25px;
+           }
+           &-review{
+            margin:38px 0 55px 0;
+           }
+           &-column{
+            margin-bottom: 56px;
+           }
+           &-column:last-child{
+          margin-bottom: 0;
+           }
+        }
+      }
+
+
 .col-sm-3 {
     padding: 0 15px;
     }
        
 
+.container-slide {
+    max-width: 100%;
+    }
+
+
+.img-carousel{
+    max-width: 55%;
+    background-size: cover;
+    overflow: hidden;
+    }
+
+
+.bg-carousel{
+    width: 55%;
+    padding: 116px 170px 116px 130px;
+    background-color: #5C3249;
+    color:$white;
+    &-term{
+    color: $white;
+    font-family: Cardo;
+    font-size: $_36px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    }
+    &-author{
+        font-family: Raleway;
+        font-size: $_13px;
+        font-weight: 700;
+        line-height: 15px;          
+        }
+    }
+
+ 
+.carousel-indicators [data-bs-target] {
+
+    background: lightblue; 
+    border-radius: 50%; 
+    // width: 10px; 
+    // height: 10px;
+    // top: 110%;
+}
+
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: $white;
+    // top: 110%;
+}
+
+
+    @media(max-width:320px){
+        .carousel-item {
+            display: flex;
+            flex-wrap: wrap;
+
+
+            width: 320px;
+            height: 538px;
+        }
+    }
+
+
+.action{
+      margin: 114px 0;
+      &-name{
+        color: $black;
+        text-align: center;
+        font-family: Raleway;
+        font-size: $_30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 25px;
+        }
+        &-description{
+            color: $black;
+            text-align: center;
+            font-family: Raleway;
+            font-size: $_18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+      }
+      
+
+.btn-action{
+      height: 80px;
+      width: 370px;
+      background-color: $red-bg;
+      color: $white;
+      text-align: center;
+      font-family: Raleway;
+      font-size: $_24px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+      align-self: center;
+      }
+
+
+    @media(max-width:320px){
+        .action{
+          margin:67px 0 45px 0;
+          box-sizing: border-box;
+          &-description{
+            margin:20px 0 11px 0;
+            width: 100%;
+            font-size: $_13px;
+          }
+          &-name{
+            width: 100%;
+            font-size: $_18px;
+          }
+        }
+        .btn-action {
+            margin-top: 11px;
+            font-size: $_18px;
+        }
+      }
+
+
+      @media(max-width:1024px){
+        .action{
+          margin:110px 0 78px 0;
+          box-sizing: border-box;
+          &-description{
+            margin:20px 0 11px 0;
+            width: 100%;
+            font-size: $_13px;
+          }
+          &-name{
+            width: 100%;
+          }
+        }
+      }
+
+
+.container-footer {
+    max-width: 100%;
+    }
 
 
 .bg-prefooter {
@@ -358,32 +587,74 @@ html {
     }
 
 
-    .icons-card-footer {
-        margin-top: 50px;
-
+.icons-card-footer {
+    margin-top: 50px;
     }
 
-    
+
 .social-icon {
     margin: 0 27px;
-}
+    }
 
 
-.bg-footer{
+.bg-footer {
     background-color:$blue-ft;
     text-align: center;
     padding: 24px 0 24px 0;
     }
-    .footer-name {
-        color: $grey;
-        font-family: Raleway;
-        font-size: $_18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: capitalize;
-        margin-bottom: 0;
+
+
+.footer-name {
+    color: $grey;
+    font-family: Raleway;
+    font-size: $_18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0;
     }
-    span{
+
+
+span{
     color:$white;
     }
+
+
+    @media(max-width:320px){
+        .bg-prefooter{
+          padding:34px 20px 33px 20px;
+        }
+        .prefooter-name{
+          margin-bottom: 35px;
+        }
+        .social{
+          margin: 69px 0 59px 0;
+        }
+        .bg-footer{
+          padding:29px 20px 6px 20px;
+        }
+        .footer-name {
+          font-size: $_14px; 
+          margin-bottom: 30px; 
+        }
+        }
+
+        @media(max-width:1024px){
+            .bg-prefooter{
+              padding:50px 30px 33px 40px;
+            }
+            .prefooter-name{
+              margin-bottom: 35px;
+            }
+            .social{
+              margin: 69px 0 59px 0;
+            }
+            .bg-footer{
+              padding:29px 20px 6px 20px;
+            }
+            .footer-name {
+              font-size: $_14px; 
+              margin-bottom: 30px; 
+            }
+            }
